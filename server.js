@@ -22,6 +22,9 @@ io.on('connection',socket=>{
         //  socket.to(roomId).broadcast.emit('user-connected',userId);
         // replacing this with newer version
         io.to(roomId).emit('user-connected', userId);
+        socket.on('message',message=>{
+            io.to(roomId).emit('createMessage',message);
+        })
         socket.on('disconnect',()=>{
             io.to(roomId).emit('user-disconnected', userId);
         })
