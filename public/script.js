@@ -3,7 +3,7 @@
 const socket=io('/');
 const videoGrid=document.getElementById('video-grid');
 const myPeer = new Peer(undefined,{
-    host:'/',
+    host:'https://fathomless-shore-26585.herokuapp.com/',
     port:'443'
 })
 const myVideo=document.createElement('video');
