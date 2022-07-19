@@ -6,9 +6,16 @@ const {v4:uuidV4}=require('uuid');
 
 app.set('view engine','ejs');
 app.use(express.static('public'));
+let a=uuidV4();
 app.get('/',(req,res)=>{
-    res.redirect(`/${uuidV4()}`);
+    res.redirect(`/${a}`);
     // dynamic room where need to redirect
+})
+app.get('/whiteboard',(req,res)=>{
+    res.redirect(`/whiteboard/${a}`);
+})
+app.get('/whiteboard/:room',(req,res)=>{
+    res.render('whiteboards',{roomId:req.params.room})
 })
 app.get('/:room',(req,res)=>{
     res.render('room',{roomId:req.params.room})
@@ -30,5 +37,5 @@ io.on('connection',socket=>{
         })
     })
 })
-server.listen(3000); 
+server.listen(process.env.PORT||3000); 
 

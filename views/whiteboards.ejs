@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhiteBoard App</title>
+    <script >
+        const ROOM_ID= "<%= roomId%>";
+    </script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/7fb9c5c8bb.js" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/peerjs@1.4.5/dist/peerjs.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <canvas id="canvas">
+     <p>Hello</p>
+    </canvas>
+    <script>
+        
+        let canvas=document.getElementById('canvas');
+canvas.width=0.98*window.innerWidth;
+canvas.height=window.innerHeight;
+let ctx=canvas.getContext("2d");
+let xc;
+let yc;
+let mouseDown=false;
+window.onmousedown=(e)=>{
+    ctx.moveTo(xc,yc);
+    mouseDown=true;
+}
+window.onmouseup=(e)=>{
+    mouseDown=false;
+}
+window.onmousemove=(e)=>{
+  xc=e.clientX;
+  yc=e.clientY;
+  if(mouseDown){
+    ctx.lineTo(xc,yc);
+    ctx.stroke();
+  }
+ 
+}
+    </script>
+    
+</body>
+</html>
