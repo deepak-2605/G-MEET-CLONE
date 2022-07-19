@@ -3,7 +3,8 @@
 const socket=io('/');
 const videoGrid=document.getElementById('video-grid');
 const myPeer = new Peer(undefined,{
-    host:'https://fathomless-shore-26585.herokuapp.com/',
+    path:'/peerjs',
+    host:'/',
     port:'443'
 })
 const myVideo=document.createElement('video');
@@ -34,13 +35,14 @@ jQuery(document).ready(function($){
     jQuery('html').keydown(function (e) {
         if (e.which == 13 && text.val().length !== 0) {
           socket.emit('message', text.val());
-          console.log(text.val());
+          
           text.val('')
         }
       });
 })
 socket.on('createMessage',message=>{
-    jQuery('ul').append(`<li class="message"><b>user</b><br>${message}</li>`);
+    console.log(message);
+    jQuery('.messages').append(`<li class="message"><b>user</b><br>${message}</li>`);
     scrollToBottom();
  })
  
