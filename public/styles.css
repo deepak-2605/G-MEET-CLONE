@@ -27,7 +27,7 @@
 }
 
 .main__right {
-    background-color: #242324;
+    background-color: white;
     border-left: 1px solid #3D3D42;
 }
 
@@ -40,21 +40,39 @@
 
 .main__controls__block {
     display: flex;
+    margin:auto;
 }
-
+.secondary_controls_block{
+    display: flex;
+}
 .main__controls__button {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 8px 10px;
-    min-width: 80px;
+    min-width: 40px;
+    border-radius: 50%;
+    background-color: gray;
     cursor: pointer;
+    margin:5px;
 }
 
+.secondary_controls_button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px;
+    min-width: 40px;
+    border-radius: 50%;
+    background-color:#1C1E20;
+    cursor: pointer;
+    margin:5px;
+}
 .main__controls__button:hover {
-    background-color: #343434;
-    border-radius: 5px;
+    background-color: gray;
+    border-radius: 50%;
 }
 
 .main__controls__button i {
@@ -64,12 +82,14 @@
 .main__right {
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
 }
 
 .main__header {
     padding-top: 5px;
-    color: #F5F5F5;
-    text-align: center;
+    padding-left: 5px;
+    color: black;
+    text-align: left;
 }
 
 .main__chat_window {
@@ -78,7 +98,7 @@
 }
 
 .messages{
-    color: white;
+    color: black;
     list-style: none;
 }
 
@@ -91,13 +111,22 @@
     flex-grow: 1;
     background-color: transparent;
     border: none;
-    color: #F5F5F5;
+    border-radius: 10px;
+    color: black;
 }
 
 .leave_meeting {
-    color: #EB534B;
+    background-color: white;
 }
-
 .unmute, .stop {
     color: #CC3B33;
+}
+.fa-microphone{
+    color: white;
+}
+.fa-video{
+    color:white;
+}
+.fa-phone-slash{
+    color:#EB534B;
 }
