@@ -8,6 +8,7 @@ const peerServer = ExpressPeerServer(server, {
   debug: true
 });
 app.set('view engine','ejs');
+app.use('/peerjs', peerServer);
 app.use(express.static('public'));
 let a=uuidV4();
 app.get('/',(req,res)=>{
