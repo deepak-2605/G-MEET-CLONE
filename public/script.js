@@ -1,10 +1,10 @@
- const { default: Peer } = require("peerjs");
+
 const socket=io('/');
 console.log(socket);
 console.log(window.location.origin);
 const videoGrid=document.getElementById('video-grid');
 const myPeer = new Peer(undefined,{
-    path:'/peerjs',
+    path:'/',
     host:'/',
     port:'443'
 })
