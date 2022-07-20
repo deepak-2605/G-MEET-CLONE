@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Meet</title>
+    <link rel="icon" type="image/png" href="../public/fav.png">
+    <link rel="stylesheet" href="homepage.css">
+    
+</head>
+<body>
+    <div class="top_bar">
+        <div class="left_side">
+            <div class="logo">
+                <a href="#"><img src="/horizontal2.png" alt="google" style="width:164px; height:40px;"></img></a>
+            </div>
+        </div>
+        <div class="right_side">
+            <div  onload="rendertime()">
+                 <p id="time"></p>
+            </div>
+            <div>
+                <a>
+                
+                </a>
+            </div>
+        </div>
+    </div> 
+    <!---------------------------------------------------------------------------------------->   
+   <div class="remaining">
+    <div class="text">
+        <div class="main">
+            <h1>Premium video meeting.</h1>
+            <h1>Now free for everyone.</h1>
+        </div>
+        <div class="exp">
+            <p>We re-engineered the service we built for secure business </p>
+            <p> meetings, Google meet, to make it availbale and free for all </p>
+        </div>
+        <div class="buttons">
+            <div class="join">
+                <button type="button" onclick="location.href='/meeting';" class="jbutton"><strong>New Meeting</strong></button>
+            </div>
+            <div class="link">
+                <input type="text" placeholder="Enter a code or link" class="link">
+            </div>
+        </div>
+        <div class="breaker">
+            <hr>
+        </div>
+        <div class="bottom">
+            <p><a href="#" class="learn">Learn More</a> about Google Meet</p>
+        </div>
+    </div>
+    <!-------------------------------------------------------->    
+    <div class="toggle">
+        <div class="left_button">
+           <button  class="lb" onclick="document.getElementById('container').src='/i11.jpg'">&lt</button>
+        </div>
+        <div class="container">
+           <img src="/i11.jpg" id="container" width="350px" height="350px">
+        </div>
+        <div class="right_button">
+           <button class="rb" onclick="document.getElementById('container').src='/i21.jpg'">&gt</button>
+        </div>
+    </div>
+   </div>
+   <!---------------------------------------------------------------------------------------->
+</body>
+</html>

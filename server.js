@@ -12,8 +12,14 @@ app.use('/peerjs', peerServer);
 app.use(express.static('public'));
 let a=uuidV4();
 app.get('/',(req,res)=>{
-    res.redirect(`/${a}`);
+    res.render('homepage');
     // dynamic room where need to redirect
+})
+app.get('/meeting',(req,res)=>{
+  res.redirect(`${uuidV4()}`);
+})
+app.get('/:room',(req,res)=>{
+  res.render('room',{roomId:req.params.room});
 })
 app.get('/whiteboard',(req,res)=>{
     res.redirect(`/whiteboard/${a}`);
@@ -21,10 +27,10 @@ app.get('/whiteboard',(req,res)=>{
 app.get('/whiteboard/:room',(req,res)=>{
     res.render('whiteboards',{roomId:req.params.room})
 })
-app.get('/:room',(req,res)=>{
-    res.render('room',{roomId:req.params.room})
-    // The second parameter is storing id in roomsID and making it available to view
-})
+// app.get('/:room',(req,res)=>{
+//     res.render('room',{roomId:req.params.room})
+//     // The second parameter is storing id in roomsID and making it available to view
+// })
 // io.on will run every time someone connects to our web server.socket is something that user connects to
 
 io.on('connection',socket=>{

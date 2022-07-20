@@ -1,9 +1,10 @@
 // const { default: Peer } = require("peerjs");
-
 const socket=io('/');
+console.log(socket);
+console.log(window.location.origin);
 const videoGrid=document.getElementById('video-grid');
 const myPeer = new Peer(undefined,{
-    path:'/peerjs',
+    path:'/',
     host:'/',
     port:'443'
 })
@@ -35,7 +36,7 @@ jQuery(document).ready(function($){
     jQuery('html').keydown(function (e) {
         if (e.which == 13 && text.val().length !== 0) {
           socket.emit('message', text.val());
-          
+          console.log(` This is text.val()${text.val()}`);
           text.val('')
         }
       });

@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+.logo{
+    width:189.42px;
+    height:40px;
+    padding-left: 25.42px;
+}
+.top_bar{
+    background-attachment: sticky;
+    
+}
+.left_side{
+    display: float;
+    width:817.17px;
+    height:48px;
+}
+.main{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+.exp{
+    font-family: 'Open Sans', sans-serif;
+}
+.jbutton{
+    background-color: #1a73e8;
+    color: white;
+    text-decoration: none;
+    border:none;
+    padding:13.59px 27px;
+    font:16px;
+    width:154px;
+    height: 48px;
+    border-radius: 2.5px;
+}
+.remaining{
+    display: float;
+}
+.toggle{
+    display: flex;
+}
+.buttons{
+    display: flex;
+}
+
+.text{
+    float: left;
+}
+.toggle{
+    float:right;
+    margin-right: 270px;
+    margin-top:100px;
+}
+.right_button{
+    margin: auto;
+}
+.left_button{
+    margin: auto;
+}
+.link{
+    width:192px;
+    height:42px;
+    margin-left:5px;
+}
+.text{
+    margin-left:70px;
+    margin-top: 100px;
+}
+div.join :hover{
+   background-color: #1a28e8;
+}
+.link :hover{
+    border-width: 2px;
+}
+.buttons{
+    margin-top: 50px;
+}
+.breaker{
+    margin-top:30px;
+    color: rgba(42, 41, 41, 0);
+}
+.bottom{
+    margin-top:20px;
+    font-family: 'Roboto', sans-serif;
+}
+.lb :hover{
+    border-radius:50%;
+  border:none;
+  font-size: 20px;
+  color: rgba(0,0,0,1);
+  background-color: rgba(220,220,220,0.7);
+}
+.rb :hover{
+    border-radius:50%;
+
+border:none;
+    font-size: 20px;
+    color: rgba(0,0,0,1);
+    background-color: rgba(220,220,220,0.7);
+}
+.lb{
+  border-radius:50%;
+  border:none;
+  font-size: 20px;
+  color: rgba(0,0,0,1);
+  background-color: rgba(255,255,255,1);
+}
+.rb{
+  border-radius:50%;
+  border:none;
+  font-size: 20px;
+  color: rgba(0,0,0,1);
+  background-color: rgba(255,255,255,1);
+}
+
+.learn{
+    color:blue;
+    font-size: medium;
+}
+.fa-video-plus{
+    width:40px
+}
