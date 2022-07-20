@@ -1,4 +1,4 @@
-// const { default: Peer } = require("peerjs");
+ const { default: Peer } = require("peerjs");
 const socket=io('/');
 console.log(socket);
 console.log(window.location.origin);
