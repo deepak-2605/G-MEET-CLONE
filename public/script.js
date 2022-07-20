@@ -28,6 +28,7 @@ navigator.mediaDevices.getUserMedia({
 })
 
    socket.on('user-connected',userId=>{
+    console.log('user connected');
     setTimeout(connectToNewUser,1000,userId,stream);      
 })
 let text = jQuery("input");
