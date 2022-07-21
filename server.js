@@ -6,7 +6,7 @@ const {v4:uuidV4}=require('uuid');
 app.set('view engine','ejs');
 app.use(express.static('public'));
 let a=uuidV4();
-app.use('/peerjs', peerServer);
+// app.use('/peerjs', peerServer);
 app.get('/',(req,res)=>{
     res.render('homepage');
     // dynamic room where need to redirect
